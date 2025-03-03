@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Potrillos - Alimentación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Archivo CSS externo -->
+</head>
+<body>
+    <!-- Botón flotante "Volver arriba" -->
+    <button class="btn btn-secondary" onclick="cargarInicio()">Volver</button>
+
+<!-- Carrusel de imágenes -->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://www.razas-caballos.com/Imagenes/caballos-pinto.jpg" class="d-block w-100" alt="Imagen 1">
+            <div class="carousel-caption d-none d-md-block">
+                <h5></h5>
+                <p>...</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://okdiario.com/img/2020/05/22/-cuando-es-adulto-tu-caballo_-1.jpg" class="d-block w-100" alt="Imagen 2">
+            <div class="carousel-caption d-none d-md-block">
+                <h5></h5>
+                <p>...</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://www.ventacaballos.com/caballos/caballo_245/caballo_245_F18.jpg" class="d-block w-100" alt="Imagen 3">
+            <div class="carousel-caption d-none d-md-block">
+                <h5></h5>
+                <p>...</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+
+    <!-- Sección Parallax -->
+    <header class="parallax">
+        <h1 class="fade-in">Adultos para entrenamiento</h1>
+    </header>
+
+    <!-- Contenido -->
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 slide-in-left">
+                <img src="imagenes/tabla.3.jpeg" class="img-fluid hover-zoom" alt="Potrillos">
+            </div>
+            <div class="col-md-8 slide-in-right">
+                <h2>Analisis</h2>
+                <p>Proteína 15%
+                    La proteína es esencial para la reparación y construcción muscular, un nivel adecuado ayuda a mantener la masa muscular y a recuperar el desgaste del ejercicio. Es esencial proporcionar a los caballos en entrenamiento una dieta equilibrada que cubra sus necesidades de proteína sin excederlas, para optimizar su rendimiento, salud y bienestar general.
+                </p>
+                <p>Grasa 3%
+                    Es un componente esencial ya que proporciona una fuente densa de energía, además de tener otros beneficios para la salud general del caballo. La grasa es utilizada principalmente para mantener el rendimiento físico, mejorar la condición corporal, y optimizar la recuperación después de actividades intensas.</p>
+                <p></p>
+            </div>
+            <p>Fibra 10%
+                Es un componente esencial ya que juega un papel crucial en la salud digestiva y el rendimiento físico. La fibra es especialmente importante porque ayuda a mantener la función gastrointestinal adecuada y promueve una digestión saludable.</p>
+            <p>Cenizas 10%
+                Son esenciales para el rendimiento, la salud ósea y el funcionamiento general del cuerpo del caballo, especialmente durante periodos de ejercicio intenso. La ceniza contiene una serie de minerales clave, como el calcio, fósforo, magnesio, potasio, sodio, y otros oligoelementos</p>
+            <p>Humedad 13%
+El contenido de humedad es crucial tanto para la digestión como para la hidratación general de los caballos en entrenamiento. Un contenido adecuado de humedad en el forraje y los concentrados ayuda a asegurar que el caballo reciba suficiente agua para mantenerse hidratado y para optimizar la absorción de nutrientes.</p>
+                <br>
+                <a href="inicio.html" class="btn btn-primary hover-grow">Volver</a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

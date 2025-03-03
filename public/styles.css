@@ -1,0 +1,234 @@
+/* Fuente moderna */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Efecto Parallax */
+.parallax {
+    background: url('https://example.com/fondo-parallax.jpg') no-repeat center center/cover;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    position: relative;
+    background-attachment: fixed;
+}
+
+/* Animaciones */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.slide-in-left {
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.slide-in-right {
+    transform: translateX(100%);
+    opacity: 0;
+    animation: slideInRight 1s ease-out forwards;
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Efectos Hover */
+.hover-zoom {
+    transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.1);
+}
+
+.hover-grow {
+    transition: all 0.3s ease;
+}
+
+.hover-grow:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Botón flotante "Volver arriba" */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#scrollTopBtn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Estilos para el botón de modo oscuro */
+.dark-mode-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.dark-mode-btn:hover {
+    background-color: #444;
+}
+
+/* Modo oscuro */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .navbar {
+    background-color: #333 !important;
+}
+
+.dark-mode .card {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode .carousel {
+    background-color: #222;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 15px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out; /* Animación de entrada */
+}
+
+.carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f8d210; /* Amarillo brillante */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Animación de entrada para el texto */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Agregar efecto hover */
+.carousel-caption:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+  
+/* Estilos para las imágenes del carrusel */
+.carousel-item img {
+    height: 500px; /* Altura fija */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 15px; /* Bordes redondeados */
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+/* Efecto hover para las imágenes */
+.carousel-item img:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+    filter: brightness(1.2); /* Hace la imagen más brillante */
+}
+
+/* Estilos para el texto dentro del carrusel */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    padding: 15px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f8d210; /* Amarillo brillante */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Animación de entrada para el texto */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botones del carrusel personalizados */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
