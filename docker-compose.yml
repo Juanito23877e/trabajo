@@ -1,0 +1,57 @@
+version: '3'
+
+services:
+  # Servicio de la base de datos MySQL
+  db:
+    image: mysql:8
+    container_name: tienda_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: tienda_db
+      MYSQL_USER: tienda_user
+      MYSQL_PASSWORD: tienda_password
+    ports:
+      - "3308:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - tienda_network
+
+  # Servicio del backend en Node.js
+  backend:
+    build: ./backend
+    container_name: tienda_backend
+    restart: always
+    environment:
+      DB_HOST: db
+      DB_USER: tienda_user
+      DB_PASSWORD: tienda_password
+      DB_NAME: tienda_db
+      PORT: 5000
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    networks:
+      - tienda_network
+
+  # Servicio del frontend en React
+  frontend:
+    build: ./frontend
+    container_name: tienda_frontend
+    restart: always
+    ports:
+      - "3001:3000"
+    depends_on:
+      - backend
+    networks:
+      - tienda_network
+
+networks:
+  tienda_network:
+    driver: bridge
+
+volumes:
+  mysql_data:
